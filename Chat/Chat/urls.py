@@ -25,6 +25,8 @@ from messenger.routing import websocket_urlpatterns
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/', include('messenger.urls')),
+    path('auth/', include('djoser.urls')),
+    path('auth/', include('djoser.urls.authtoken')),
     path('login/', CustomLoginView.as_view(), name='login'),
     path('register/', CustomRegisterView.as_view(), name='register'),
     path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
