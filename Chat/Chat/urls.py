@@ -31,6 +31,7 @@ urlpatterns = [
     path('register/', CustomRegisterView.as_view(), name='register'),
     path('logout/', LogoutView.as_view(next_page='login'), name='logout'),
     path('ws/', include(websocket_urlpatterns)),
+
 ]
 
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

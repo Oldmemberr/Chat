@@ -47,7 +47,7 @@ class GroupChatCreationForm(forms.ModelForm):
 class GroupMessageForm(forms.ModelForm):
     class Meta:
         model = Message
-        fields = ['content', 'recipient']
+        fields = ['content']
 
     def __init__(self, *args, **kwargs):
         super(GroupMessageForm, self).__init__(*args, **kwargs)

@@ -3,7 +3,7 @@ from .models import UserInfo, Chat, Message
 from djoser.serializers import TokenSerializer
 from rest_framework import serializers
 from djoser.conf import settings as djoser_settings
-from stream_chat import StreamChat
+# from stream_chat import StreamChat
 from django.conf import settings
 
 class StreamTokenSerializer(TokenSerializer):
